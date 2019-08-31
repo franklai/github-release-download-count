@@ -17,8 +17,8 @@ class App extends React.Component {
     const json = await resp.json();
 
     const items = [];
-    for (const release of json) {
-      for (const asset of release.assets) {
+    json.forEach((release) => {
+      release.assets.forEach((asset) => {
         items.push({
           id: asset.id,
           name: asset.name,
@@ -26,8 +26,8 @@ class App extends React.Component {
           updated_at: asset.updated_at,
           download_count: asset.download_count
         });
-      }
-    }
+      })
+    });
 
     this.setState({ items: items });
   }
