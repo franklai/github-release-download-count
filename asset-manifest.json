@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github-release-download-count/static/css/main.2cce8147.chunk.css",
-    "main.js": "/github-release-download-count/static/js/main.c5447b74.chunk.js",
-    "main.js.map": "/github-release-download-count/static/js/main.c5447b74.chunk.js.map",
-    "runtime~main.js": "/github-release-download-count/static/js/runtime~main.d0a61110.js",
-    "runtime~main.js.map": "/github-release-download-count/static/js/runtime~main.d0a61110.js.map",
-    "static/js/2.17e47452.chunk.js": "/github-release-download-count/static/js/2.17e47452.chunk.js",
-    "static/js/2.17e47452.chunk.js.map": "/github-release-download-count/static/js/2.17e47452.chunk.js.map",
+    "main.css": "/github-release-download-count/static/css/main.692d75bb.chunk.css",
+    "main.js": "/github-release-download-count/static/js/main.8800e7e9.chunk.js",
+    "main.js.map": "/github-release-download-count/static/js/main.8800e7e9.chunk.js.map",
+    "runtime~main.js": "/github-release-download-count/static/js/runtime~main.5f076e00.js",
+    "runtime~main.js.map": "/github-release-download-count/static/js/runtime~main.5f076e00.js.map",
+    "static/js/2.0bd6455f.chunk.js": "/github-release-download-count/static/js/2.0bd6455f.chunk.js",
+    "static/js/2.0bd6455f.chunk.js.map": "/github-release-download-count/static/js/2.0bd6455f.chunk.js.map",
     "index.html": "/github-release-download-count/index.html",
-    "precache-manifest.f65e31a615c5f8eef330bd6581c68550.js": "/github-release-download-count/precache-manifest.f65e31a615c5f8eef330bd6581c68550.js",
+    "precache-manifest.6c2095d2d409ac5068b3eede63858d7e.js": "/github-release-download-count/precache-manifest.6c2095d2d409ac5068b3eede63858d7e.js",
     "service-worker.js": "/github-release-download-count/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/github-release-download-count/static/css/main.2cce8147.chunk.css.map"
+    "static/css/main.692d75bb.chunk.css.map": "/github-release-download-count/static/css/main.692d75bb.chunk.css.map"
   }
 }
