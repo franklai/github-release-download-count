@@ -6842,6 +6842,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "github-release-download-count@workspace:."
   dependencies:
+    eslint-config-react-app: ^6.0.0
     gh-pages: ^3.1.0
     react: ^17.0.1
     react-dom: ^17.0.1
