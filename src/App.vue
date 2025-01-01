@@ -1,47 +1,51 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue';
+
+import ReleaseList from './components/ReleaseList.vue';
+
+const account = ref('franklai');
+const repository = ref('synologylyric');
+const releaseItems = ref([]);
+
+async function fetchReleases() {
+  const url = `https://api.github.com/repos/${account.value}/${repository.value}/releases`;
+  const resp = await fetch(url);
+  const json = await resp.json();
+
+  const items = [];
+  json.forEach((release) => {
+    release.assets.forEach((asset) => {
+      items.push({
+        id: asset.id,
+        name: asset.name,
+        download_url: asset.browser_download_url,
+        updated_at: asset.updated_at,
+        download_count: asset.download_count,
+      });
+    });
+  });
+
+  releaseItems.value = items;
+}
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div className="App">
+    <label>Account:</label>
+    <input
+      type="text"
+      name="account"
+      :value="account"
+      @input="(event) => (account = event.target.value)"
+    />
+    <br />
+    <label>Repository:</label>
+    <input type="text" name="repository" v-model="repository" />
+    <br />
+    <button @click="fetchReleases">Show Download Count</button>
+    <ReleaseList :items="releaseItems" />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style scoped></style>
