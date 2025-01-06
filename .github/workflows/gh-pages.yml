@@ -3,7 +3,7 @@ name: gh-pages
 on:
   push:
     branches:
-      - vue3 # Set a branch name to trigger deployment
+      - main # Set a branch name to trigger deployment
 
 jobs:
   build:
